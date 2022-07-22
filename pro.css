@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #140019;
+}
+.container{
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    overflow:hidden;
+}
+.product{
+    width: 400px;
+    height: 550px;
+    perspective: 1000px;
+}
+.product-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+.product-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateZ(30px);
+}
+.product-top{
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(#0794a6,#9bae07);
+    color: #fff;
+
+}
+.product-top h1{
+    font-size: 120px;
+    margin-left: 10px;
+    font-style: italic;
+    opacity: 0.4;
+}
+.product-bottom{
+    padding: 50px 25px;
+}
+.product-bottom p{
+    font-size: 15px;
+}
+.product-bottom h3{
+    margin-bottom: 35px;
+    color:#9bae07;
+    letter-spacing: 1.5px;
+}
+.product-bottom h1{
+    font-style: 45px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 7px;
+}
+.product-bottom h1 span{
+    color:rebeccapurple;
+}
+.product-bottom button{
+    padding: 10px 20px;
+    background: transparent;
+    color: #008394;
+    border: 2px solid #008394;
+    border-radius: 30px;
+    outline: none;
+}
+.color-select{
+    display: flex;
+    float: right;
+    margin-top: -10px;
+}
+.select-item{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px;
+    box-shadow: -5px 0 8px 2px rgba( 156,216,244,0.5);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.select-item img{
+    width: 80%;
+    padding-top: 10%;
+}
+.select-item:hover{
+    background: rgba( 156,216,244,0.5);
+    box-shadow: none;
+    transition: 0.5s;
+}
+.product-top2{
+    background: linear-gradient(#c370fd,#3be1b8);
+}
+.product-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    transform: translateZ(-25px) rotateY(180deg);
+}
+.left-side, .right-side{
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    transform: rotateY(90deg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+.right-side{
+    transform: rotateY(-90deg);
+    left: auto;
+    right: -25px;
+}
+#firstimg{
+    width: 340px;
+    top: 70px;
+    left: 20px;
+    position: absolute;
+    transform: translateZ(50px);
+    transition: 1s;
+    z-index: 100;
+}
+#secondimg{
+    width: 340px;
+    top: 70px;
+    left: -650px;
+    position: absolute;
+    transform: translateZ(50px) rotate(-30deg);
+    transition: 1s;
+    z-index: 100;
+}
